@@ -9,14 +9,9 @@
       <th>Email</th>
     </tr>
   </thead>
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.name %></td>
-        <td><%= person.email %></td>
-      </tr>
-    <% end %>
+  <tbody id="rows">
+    <%= render @people %>
   </tbody>
 </table>
-<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+<%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
 
