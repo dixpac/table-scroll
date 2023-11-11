@@ -13,5 +13,8 @@
     <%= render @people %>
   </tbody>
 </table>
-<%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
+<div id="next_page">
+  <%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
+</div>
+
 

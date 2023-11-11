@@ -2,7 +2,7 @@
   <%= render partial: "person", collection: @people %>
 <% end %>
 
-<%= turbo_stream.update "next_link" do %>
+<%= turbo_stream.update "next_page" do %>
   <% if @pagy.next.present? %>
     <%= button_to "next", pagy_url_for(@pagy, @pagy.next) %>
   <% end %>
