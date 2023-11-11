@@ -4,7 +4,6 @@ class PeopleController < ApplicationController
   # GET /people or /people.json
   def index
     @pagy, @people = pagy_countless(Person.all)
-    # render 'scrollable_list' if params[:page]
 
     respond_to do |format|
       format.html
